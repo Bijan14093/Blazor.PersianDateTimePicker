@@ -1,0 +1,28 @@
+﻿@using Microsoft.JSInterop
+@inject IJSRuntime JS
+<div id="PersianDatePicker" class="DatePicker">
+    <input id="txtPersianDatePicker"
+           type="text"
+           autocomplete="off">
+    <label id="lblCalendarIcon"
+           for="txtPersianDatePicker"
+           class="input-group-addon  IconStyle ">
+        <img for="txtPersianDatePicker"
+             src="./_content/Blazor.PersianDateTimePicker/DatePicker.Calendar-icon.png"
+             style="width:20px;"
+             data-placement="top" />
+    </label>
+</div>
+@code   {
+    private string? data;
+    protected override async void OnAfterRender(bool firstRender)
+    {
+        if (firstRender && data == null)
+        {
+           JsInterop jsInterop = new JsInterop(JS);
+           data=await jsInterop.ShowDatePicker("PersianDatePicker");
+
+            StateHasChanged();
+        }
+    }
+}
