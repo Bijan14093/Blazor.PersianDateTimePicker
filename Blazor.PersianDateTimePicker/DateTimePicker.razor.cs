@@ -20,7 +20,13 @@ namespace Blazor.PersianDateTimePicker
         IJSRuntime JS { get; set; }
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
-            if (firstRender) { await JS.InvokeVoidAsync("initPersianCalender", id); }
+            if (firstRender) {
+                lock (this)
+                {
+                    JS.InvokeVoidAsync("initPersianCalender", id);
+                }
+                
+            }
             await base.OnAfterRenderAsync(firstRender);
         }
 
