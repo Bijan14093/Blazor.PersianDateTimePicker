@@ -10,11 +10,17 @@ namespace Blazor.PersianDateTimePicker
 {
     public partial class DateTimePicker:ComponentBase
     {
+        private Guid id;
+
+        protected override void OnInitialized()
+        {
+            id = Guid.NewGuid();
+        }
         [Inject]
         IJSRuntime JS { get; set; }
         protected override void OnAfterRender(bool firstRender)
         {
-            JS.InvokeVoidAsync("initPersianCalender");
+            if (firstRender) { JS.InvokeVoidAsync("initPersianCalender", id); }
             base.OnAfterRender(firstRender);
         }
     }
