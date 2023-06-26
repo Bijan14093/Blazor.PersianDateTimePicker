@@ -1,28 +1,17 @@
-﻿@using Microsoft.JSInterop
-@inject IJSRuntime JS
-<div id="PersianDatePicker" class="DatePicker">
-    <input id="txtPersianDatePicker"
-           type="text"
-           autocomplete="off">
-    <label id="lblCalendarIcon"
-           for="txtPersianDatePicker"
-           class="input-group-addon  IconStyle ">
-        <img for="txtPersianDatePicker"
-             src="./_content/Blazor.PersianDateTimePicker/DatePicker.Calendar-icon.png"
-             style="width:20px;"
-             data-placement="top" />
-    </label>
+﻿<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <div for="PersianDatePicker" class="input-group-text PersainDatePicker" id="inputGroup-sizing-default">
+            <img title=""
+                 for="PersianDatePicker"
+                 src="./DatePicker.Calendar-icon.png"
+                 data-toggle="tooltip"
+                 data-placement="top"
+                 style="width:20px"
+                 data-original-title="Ctrl + Delete = پاک کردن مقدار
+Ctrl + Home = ابتدای ساعت
+Ctrl + End = انتهای ساعت
+Ctrl + Space = زمان جاري">
+        </div>
+    </div>
+    <input type="text" id="PersianDatePicker" class="form-control PersainDatePicker TextStyle" autocomplete="off" maxlength="19">
 </div>
-@code   {
-    private string? data;
-    protected override async void OnAfterRender(bool firstRender)
-    {
-        if (firstRender && data == null)
-        {
-           JsInterop jsInterop = new JsInterop(JS);
-           data=await jsInterop.ShowDatePicker("PersianDatePicker");
-
-            StateHasChanged();
-        }
-    }
-}

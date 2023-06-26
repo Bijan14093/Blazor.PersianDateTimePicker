@@ -5,31 +5,39 @@
     Layout = null;
 }
 
-<!DOCTYPE html>
-<html lang="en">
+
+<html lang="fa">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blazor.PersianDateTimeControl.UI</title>
-    <base href="~/" />
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-    <link href="css/site.css" rel="stylesheet" />
-    <link href="Blazor.PersianDateTimeControl.UI.styles.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="_content/Blazor.PersianDateTimePicker/css/persian-datepicker.css" />
+    <script src="_content/Blazor.PersianDateTimePicker/js/jquery-3.6.0.min.js"></script>
+    <script src="_content/Blazor.PersianDateTimePicker/js/persian-date.js"></script>
+    <script src="_content/Blazor.PersianDateTimePicker/js/persian-datepicker.js"></script>
+    <script src="_content/Blazor.PersianDateTimePicker/Init.js"></script>
 </head>
+
 <body>
-    <component type="typeof(App)" render-mode="ServerPrerendered" />
-
-    <div id="blazor-error-ui">
-        <environment include="Staging,Production">
-            An error has occurred. This application may no longer respond until reloaded.
-        </environment>
-        <environment include="Development">
-            An unhandled exception has occurred. See browser dev tools for details.
-        </environment>
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
-    </div>
-
+    <component type="typeof(App)" render-mode="Server" />
     <script src="_framework/blazor.server.js"></script>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <div for="PersianDatePicker" class="input-group-text PersainDatePicker" id="inputGroup-sizing-default">
+                <img title=""
+                     for="PersianDatePicker"
+                     src="./DatePicker.Calendar-icon.png"
+                     data-toggle="tooltip"
+                     data-placement="top"
+                     style="width:20px"
+                     data-original-title="Ctrl + Delete = پاک کردن مقدار
+Ctrl + Home = ابتدای ساعت
+Ctrl + End = انتهای ساعت
+Ctrl + Space = زمان جاري">
+            </div>
+        </div>
+        <input type="text" id="PersianDatePicker" class="form-control PersainDatePicker TextStyle" autocomplete="off" maxlength="19">
+    </div>
+    <script>
+        initPersianCalender();
+    </script>
 </body>
 </html>
