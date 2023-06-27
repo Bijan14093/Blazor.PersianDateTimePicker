@@ -1,21 +1,24 @@
-﻿<div  class="input-group mb-3">
-    <div class="input-group-prepend" onclick="document.getElementById('@id').focus()">
-        <div class="input-group-text PersianDateTimePicker" >
-            <img title=""
-                 for="PersianDateTimePicker"
+﻿<div class="input-group mb-3">
+    <div id="PersianDatePickerContainer" class="input-group-prepend"
+         onclick="document.getElementById('@id').focus();"
+         data-placement="top"
+         data-toggle="tooltip"
+         date-html="true"
+         title="
+            <div>
+            <div><span>Ctrl+Delete=</span><span>پاک کردن</span></div>
+            <div><span>Ctrl+Home=</span><span>ابتدای روز</span></div>
+            <div><span>Ctrl+End=</span><span>انتهای روز</span></div>
+            <div><span>Ctrl+Space=</span><span>زمان جاري</span></div>
+            </div>
+        "
+         >
+        <div for="PersianDatePicker"  class="input-group-text PersainDatePicker" id="inputGroup-sizing-default">
+            <img for="PersianDatePicker"
                  src="_content/Blazor.PersianDateTimePicker/DatePicker.Calendar-icon.png"
-                 data-toggle="tooltip"
-                 data-placement="top"
-                 style="width:20px"
-                 data-original-title="Ctrl + Delete = پاک کردن مقدار
-Ctrl + Home = ابتدای ساعت
-Ctrl + End = انتهای ساعت
-Ctrl + Space = زمان جاري">
+                 style="width:20px"/>
         </div>
     </div>
-    <input id="@id" type="text"  
-        class="form-control PersianDateTimePicker TextStyle" 
-        autocomplete="off" maxlength="19"
-        style="direction:ltr"
-    >
+    <input type="text" id="@id" class="form-control PersainDatePicker TextStyle" autocomplete="off" maxlength="19"
+           style="direction: ltr;" />
 </div>
