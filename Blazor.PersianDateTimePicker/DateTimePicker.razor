@@ -1,24 +1,33 @@
 ﻿<div class="input-group mb-3">
-    <div id="PersianDatePickerContainer" class="input-group-prepend"
+    <div id="PersianDatePickerContainer" 
+         class="input-group-prepend"
          onclick="document.getElementById('@id').focus();"
-         data-placement="top"
-         data-toggle="tooltip"
-         date-html="true"
          title="
-            <div>
-            <div><span>Ctrl+Delete=</span><span>پاک کردن</span></div>
-            <div><span>Ctrl+Home=</span><span>ابتدای روز</span></div>
-            <div><span>Ctrl+End=</span><span>انتهای روز</span></div>
-            <div><span>Ctrl+Space=</span><span>زمان جاري</span></div>
-            </div>
+Ctrl+Delete=پاک کردن
+Ctrl+Home=ابتدای روز
+Ctrl+End=انتهای روز
+Ctrl+Space=زمان جاري
         "
          >
-        <div for="PersianDatePicker"  class="input-group-text PersainDatePicker" id="inputGroup-sizing-default">
-            <img for="PersianDatePicker"
+        <div 
+            for="PersianDatePicker"  
+            class="input-group-text PersainDatePicker" 
+            >
+            <img 
                  src="_content/Blazor.PersianDateTimePicker/DatePicker.Calendar-icon.png"
                  style="width:20px"/>
         </div>
     </div>
-    <input type="text" id="@id" class="form-control PersainDatePicker TextStyle" autocomplete="off" maxlength="19"
-           style="direction: ltr;" />
+    <input type="text" 
+           id="@id" 
+           class="form-control PersainDatePicker TextStyle" 
+           autocomplete="off" 
+           maxlength="19"
+           style="direction: ltr;"
+           title="
+Ctrl+Delete=پاک کردن
+Ctrl+Home=ابتدای روز
+Ctrl+End=انتهای روز
+Ctrl+Space=زمان جاري
+        " />
 </div>
