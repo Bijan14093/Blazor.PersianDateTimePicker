@@ -4,4 +4,20 @@
 
 Welcome to your new app.
 
-<Blazor.PersianDateTimePicker.DateTimePicker/>
+<Blazor.PersianDateTimePicker.DateTimePicker DateTimeChanged="ShowDate" InitialDate=DateTime.Now/>
+<input @bind="_Date" />
+<br />
+<Blazor.PersianDateTimePicker.DateTimePicker @bind-Value="_DateBind" InitialDate=DateTime.Now  />
+<input @bind="_DateBind" />
+@code
+{
+
+    private DateTime? _DateBind;
+
+    private string _Date;
+    private void ShowDate(DateTime? dt)
+    {
+        _Date = dt.ToString();
+
+    }
+}
