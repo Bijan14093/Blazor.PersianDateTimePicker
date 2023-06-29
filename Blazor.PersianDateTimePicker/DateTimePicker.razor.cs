@@ -74,7 +74,11 @@ namespace Blazor.PersianDateTimePicker
                 {
                     JS.InvokeVoidAsync("initPersianCalender", id);
                 }
-                Text = InitialDate.ToString().ToPersianDate();
+                if (InitialDate!=DateTime.MinValue)
+                {
+                    Text = InitialDate.ToString().ToPersianDate();
+                }
+                
             }
             await base.OnAfterRenderAsync(firstRender);
         }
