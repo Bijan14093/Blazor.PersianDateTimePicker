@@ -21,9 +21,18 @@ namespace Blazor.PersianDateTimePicker
             set { 
                 if (_Text != value)
                 {
-                    _Text = value;
-                    _DateTime = _Text.ToDateTime();
-                    onChangeDate();
+                    try
+                    {
+                        _DateTime = value.ToDateTime();
+                        _Text = value;
+                        onChangeDate();
+                    }
+                    catch (Exception)
+                    {
+                       //nothing
+                    }
+
+
                 }
                 
             }
@@ -38,7 +47,7 @@ namespace Blazor.PersianDateTimePicker
                 if (_DateTime != value)
                 {
                     _DateTime = value;
-                    _Text = _DateTime.ToString().ToPersianDate();
+                    _Text = _DateTime.ToString().ToPersianDate(true, "{0}/{1}/{2} {3}:{4}:{5}");
                     onChangeDate();
                 }
             }
@@ -76,7 +85,7 @@ namespace Blazor.PersianDateTimePicker
                 }
                 if (InitialDate!=DateTime.MinValue)
                 {
-                    Text = InitialDate.ToString().ToPersianDate();
+                    Text = InitialDate.ToString().ToPersianDate(true, "{0}/{1}/{2} {3}:{4}:{5}");
                 }
                 
             }
