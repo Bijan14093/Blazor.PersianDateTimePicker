@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net5.0</TargetFrameworks>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Bijan Ghasemi</Authors>
@@ -12,7 +12,9 @@
     <PackageIcon>DatePicker.Calendar-icon.png</PackageIcon>
     <PackageIconUrl />
     <PackageReleaseNotes>1.0.1
-First Release.</PackageReleaseNotes>
+First Release.
+1.0.2
+update README.md.</PackageReleaseNotes>
     <PackageTags>Persian Date Picker Blazor persian date picker blazor</PackageTags>
     <AssemblyVersion>1402.04.19.08</AssemblyVersion>
     <FileVersion>1402.04.19.08</FileVersion>
@@ -26,7 +28,7 @@ First Release.</PackageReleaseNotes>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.16" />
-	  <None Include="..\README.md" Pack="true" PackagePath="\"/>
+	  <None Include="..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
