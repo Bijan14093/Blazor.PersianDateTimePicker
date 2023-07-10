@@ -1,7 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFrameworks>net5.0</TargetFrameworks>
+    <Version>1.0.1</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>Bijan Ghasemi</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Bijan14093/Blazor.PersianDateTimePicker</PackageProjectUrl>
+    <Description>Persian date control in Blazor.</Description>
+    <PackageIcon>DatePicker.Calendar-icon.png</PackageIcon>
+    <PackageIconUrl />
+    <PackageReleaseNotes>1.0.1
+First Release.</PackageReleaseNotes>
+    <PackageTags>Persian Date Picker Blazor persian date picker blazor</PackageTags>
+    <AssemblyVersion>1402.04.19.08</AssemblyVersion>
+    <FileVersion>1402.04.19.08</FileVersion>
   </PropertyGroup>
 
   
@@ -11,6 +25,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.16" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\DatePicker.Calendar-icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

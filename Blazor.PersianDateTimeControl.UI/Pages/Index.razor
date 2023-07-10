@@ -1,12 +1,10 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
-
+<h2>With event: DateTimeChanged</h2>
 <Blazor.PersianDateTimePicker.DateTimePicker DateTimeChanged="ShowDate" InitialDate=DateTime.Now/>
 <input @bind="_Date" />
 <br />
+<h2>With binding: bind-Value</h2>
 <Blazor.PersianDateTimePicker.DateTimePicker @bind-Value="_DateBind"  />
 <input @bind="_DateBind" />
 @code
