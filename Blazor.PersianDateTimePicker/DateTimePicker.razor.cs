@@ -15,7 +15,7 @@ namespace Blazor.PersianDateTimePicker
         public DateTime InitialDate { get; set; }
         private string? _Text;
 
-        private string? Text
+        public string? Text
         {
             get { return _Text; }
             set { 
