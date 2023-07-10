@@ -78,5 +78,15 @@ Text: It is a property  that determines the persian value.
 
 Value: It is a property  that determines the  DateTime value.
 
+# shortcuts
+
+Ctrl+Delete=Delete
+
+Ctrl+Home=Start of day
+
+Ctrl+End=end of day
+
+Ctrl+Space=current time
+
 ## License
 [MIT](https://licenses.nuget.org/MIT)
