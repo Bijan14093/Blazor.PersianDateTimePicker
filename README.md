@@ -36,6 +36,7 @@ like
 ## 4. use in project.
 
 Sample:
+
     @page "/"
     
     <h2>With event: DateTimeChanged</h2>

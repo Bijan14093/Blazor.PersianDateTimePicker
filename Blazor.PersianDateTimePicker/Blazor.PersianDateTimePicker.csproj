@@ -16,6 +16,7 @@ First Release.</PackageReleaseNotes>
     <PackageTags>Persian Date Picker Blazor persian date picker blazor</PackageTags>
     <AssemblyVersion>1402.04.19.08</AssemblyVersion>
     <FileVersion>1402.04.19.08</FileVersion>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   
@@ -25,6 +26,7 @@ First Release.</PackageReleaseNotes>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.16" />
+	  <None Include="..\README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
   <ItemGroup>
